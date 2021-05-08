@@ -1,12 +1,12 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { Button, Icon, Item, List, Segment } from 'semantic-ui-react'
+import { Button, Icon, List, Item, Segment } from 'semantic-ui-react'
 import EventListAttendee from './EventListAttendee'
 import { deleteEvent } from '../redux/eventActionsCreator'
 import { format } from 'date-fns'
 
-const EventListItem = ({ event }) => {
+    const EventListItem = ({ event }) => {
     const dispatch = useDispatch()
     return (
         <Segment.Group>

@@ -2,15 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import 'semantic-ui-css/semantic.min.css'
+import 'react-toastify/dist/ReactToastify.min.css'
+import 'react-calendar/dist/Calendar.css'
 import './App.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
 import rootReducer from './redux/rootReducer';
 import ScrollToTop from './components/ScrollToTop';
+import thunk from 'redux-thunk';
+import { loadEvents } from './redux/eventActionsCreator';
 
-const store = createStore(rootReducer)
+const store = createStore(rootReducer, applyMiddleware(thunk))
+
+store.dispatch(loadEvents())
 
 ReactDOM.render(
   <Provider store={store} >

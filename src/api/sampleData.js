@@ -20,7 +20,8 @@ export const sampleData = [
                 displayName: 'Tom',
                 photoURL: 'https://randomuser.me/api/portraits/men/22.jpg'
             }
-        ]
+        ],
+        url: 'https://www.youtube.com/watch?v=010_mhlfZpA'
     },
     {
         id: '2',
@@ -43,6 +44,7 @@ export const sampleData = [
                 displayName: 'Tom',
                 photoURL: 'https://randomuser.me/api/portraits/men/22.jpg'
             }
-        ]
+        ],
+        url: 'https://www.youtube.com/watch?v=H5SMtN6Qa6w'
     }
 ];

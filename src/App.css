@@ -35,6 +35,12 @@ body {
   width: 100%
 }
 
+.react-calendar {
+  width: 100%;
+  border: none;
+  box-shadow: 0 1px 2px 0 rgb(34, 36, 38, .15);
+}
+
 .modal-wrapper {
   position: relative;
   padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */

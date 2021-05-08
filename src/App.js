@@ -7,13 +7,15 @@ import EventDetailedPage from './routes/EventDetailedPage';
 import EventDashboard from './components/EventDashboard';
 import EventForm from './components/EventForm';
 import ModalManager from './components/modal/ModalManager';
-import Test from './TestVideo';
+import Test from './Test';
+import {ToastContainer} from 'react-toastify'
 
-function App() {
+export default function App() {
   const {key} = useLocation()
   return (
     <>
       <ModalManager />
+      <ToastContainer position='bottom-right' hideProgressBar/>
       <Route exact path='/' component={HomePage} /> 
       <Route path={'/(.+)'} render={() => (
         <>
@@ -30,8 +32,6 @@ function App() {
     </>  
   );
 }
-
-export default App;
 
 // function handleCreateFormOpen() {
 //   setSelectedEvent(null);
